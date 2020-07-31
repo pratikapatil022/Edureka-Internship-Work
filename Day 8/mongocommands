@@ -1,0 +1,43 @@
+/////To Check all databases//////
+show dbs
+
+///////To Go inside any database//////
+use database name
+
+//////////To See all collections///////
+show collections
+
+
+////////TO Check Data in any collection//////
+db.nodeat8.find()    //Select * from nodeat8
+db.nodeat8.find().pretty()
+
+////Conditional Querry//////
+find all the user on th basis of city name
+
+db.nodeat8.find({"lastname":"abc"}).pretty()
+
+db.nodeat8.find({"city":"Newyork","name":"John"}).pretty()
+
+//Select * from nodeat8 where city="Newyork" and name="John"
+
+
+db.nodeat8.find({$or:[{"city":"Newyork"},{"name":"John"}]}).pretty()
+
+
+
+///////////////////////////////////////////
+Step to create database
+//////////////////////
+
+use database name
+db.user.insert({name:"Kiev",class:"Ui"})
+db.user.insert({_id:1,name:"John",class:"Node"})
+db.user.insert({_id:2,name:"Alvin",class:"React"})
+
+**
+_id > is primary and unique key
+
+
+
+gridfs
