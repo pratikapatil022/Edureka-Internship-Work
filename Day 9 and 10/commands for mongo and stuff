@@ -1,0 +1,74 @@
+HERE ARE A BUNCH OF COOL COMMANDS FOR MONGODB AND STUFF
+
+
+/////To Check all databases//////
+show dbs
+
+///////To Go inside any database//////
+use database name
+
+//////////To See all collections///////
+show collections
+
+
+////////TO Check Data in any collection//////
+db.nodeat8.find()    //Select * from nodeat8
+db.nodeat8.find().pretty()
+
+////Conditional Query//////
+find all the user on th basis of city name
+
+db.nodeat8.find({"lastname":"abc"}).pretty()
+
+db.nodeat8.find({"city":"Newyork","name":"John"}).pretty()
+
+//Select * from nodeat8 where city="Newyork" and name="John"
+
+
+db.nodeat8.find({$and:[{"city":"Newyork"},{"name":"John"}]}).pretty()
+
+
+
+///////////////////////////////////////////
+Step to create database
+//////////////////////
+
+use database name
+db.user.insert({name:"Kiev",class:"Ui"})
+db.user.insert({_id:1,name:"John",class:"Node"})
+db.user.insert({_id:2,name:"Alvin",class:"React"})
+
+**
+_id > is primary and unique key
+
+
+
+///////////////////////////////////////////
+Step to update data
+//////////////////////
+db.user.update({_id:1},{$set:{"class":"fullstack"}})
+
+
+///////////////////////////////////////////
+Step to Remove data
+//////////////////////
+db.user.remove({_id:1})
+
+
+db.restaurant.find({"type.mealtype":1}).pretty()
+
+db.restaurant.update({_id:"1"},{$set:{"type.0.mealtype":"4","type.0.name":"snacks"}})
+
+
+db.restaurant.find({}).sort({cost:-1}).pretty()
+
+db.restaurant.find({cost:{$gt:200,$lt:300}}).pretty()
+ db.restaurant.find({cost:{$gt:200,$lt:500}}).sort({cost:1}).pretty()
+
+
+
+db.restaurant.find({city:'1',"type.mealtype":'4',"Cuisine.cuisine":'1',cost:{$gt:200,$lt:500}}).sort({cost:1}).pretty()
+  
+
+
+  db.restaurant.find({"Cuisine.cuisine":'1'}).sort({cost:1}).pretty()
