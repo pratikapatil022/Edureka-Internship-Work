@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-const locurl = "http://localhost:4000/location";
-const resturl = "http://localhost:4000/restauranthome?city=";
+const locurl = "http://localhost:3000/location";
+const resturl = "http://localhost:3000/restauranthome?city=";
 
 class Search extends Component {
     constructor() {
