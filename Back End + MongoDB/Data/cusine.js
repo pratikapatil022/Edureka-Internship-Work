@@ -28,6 +28,11 @@ db.cuisine.insertMany([
         _id: 5,
         name: "Street Food",
         cuisine: 5
-    }
+    },
+    {
+        _id: 6,
+        name: "Superman Food",
+        cuisine: 6
+    },
 ]
 )

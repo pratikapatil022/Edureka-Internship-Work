@@ -8,7 +8,9 @@ let db;
 app.use(cors());
 
 
-
+app.get("/", (req, res) => {
+    res.send("This Api Is Ready")
+})
 
 app.get('/restauranthome', (req, res) => {
     var query = {}
@@ -28,7 +30,6 @@ app.get('/restauranthome', (req, res) => {
 })
 
 app.get('/restaurantdetails/:id', (req, res) => {
-    console.log(req.params.id)
     var query = { _id: req.params.id }
     db.collection('restaurant').find(query).toArray((err, result) => {
         if (err) throw err;
@@ -102,8 +103,8 @@ app.get('/mealtype', (req, res) => {
 
 MongoClient.connect(mongoUrl, (err, client) => {
     if (err) console.log("Error My Man Init!!!")
-    db = client.db('restaurant');
-    app.listen(3000, (err) => {
+    db = client.db('Restaurants');
+    app.listen(4000, (err) => {
         if (err) throw err;
         console.log(`Server is running`)
     })
