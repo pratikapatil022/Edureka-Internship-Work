@@ -14,11 +14,11 @@ const DisplaySearch = (props) => {
                                 <img src={`/images/${item.name}.png`} />
                             </div>
                             <div className="tileComponent2">
-                                <div className="componentHeading">
+                                <div className="componentHeading" style={{ textTransform: "uppercase" }}>
                                     {item.name}
                                 </div>
                                 <div className="componentSubHeading">
-                                    Start your day with exclusive Breakfast Option
+                                    Start your day with exclusive options
                                     </div>
                             </div>
 
@@ -33,7 +33,7 @@ const DisplaySearch = (props) => {
         <div>
             <div className="quickSearchContainer">
                 <p className="quickSearchHeading">
-                    Quick Search !!
+                    Quick Search
                 </p>
                 <p className="quickSearchSubHeading">
                     Discover Reastaurants By Type Of Meal

@@ -5,7 +5,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 const restdetail = "http://localhost:4000/restaurantdetails";
-class Restaurent extends Component {
+class Restaurant extends Component {
     constructor(props) {
         super(props)
 
@@ -72,7 +72,7 @@ class Restaurent extends Component {
                         </div>
                         <br /><br />
                         <div className="row">
-                            <button class="btn btn-danger btn-lg"
+                            <button class="btn btn-danger btn-sm"
                                 onClick={this.backbutton}>Back</button>
                             &nbsp;
                             <Link to={`/order/${this.props.match.params.id}`} class="btn btn-success btn-lg">Place Order</Link>
@@ -91,4 +91,4 @@ class Restaurent extends Component {
     }
 }
 
-export default Restaurent;
+export default Restaurant;

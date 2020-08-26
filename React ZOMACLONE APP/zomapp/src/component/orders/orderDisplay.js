@@ -1,33 +1,33 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import OrderView from './orderView';
 
-const orderdetail = "http://localhost:8900/allOrder";
+const orderdetail = "http://localhost:4000/allOrder";
 
-class OrderDisplay extends Component{
-    constructor(){
+class OrderDisplay extends Component {
+    constructor() {
         super()
 
-        this.state={
-            orders:''
+        this.state = {
+            orders: ''
         }
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
-            <div className="container">
-                <div>
-                    <OrderView orderdata={this.state.orders}/> 
+                <div className="container">
+                    <div>
+                        <OrderView orderdata={this.state.orders} />
+                    </div>
                 </div>
             </div>
-        </div>
         )
     }
 
-    componentDidMount(){
+    componentDidMount() {
         axios.get(`${orderdetail}`)
-        .then((response) => {this.setState({orders:response.data})})
+            .then((response) => { this.setState({ orders: response.data }) })
     }
 }
 

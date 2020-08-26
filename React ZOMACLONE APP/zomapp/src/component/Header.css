@@ -1,0 +1,10 @@
+.bigbar{
+    background-color: rgb(255, 38, 0);
+    height:55px;
+}
+li{
+    color:white;
+}
+.right{
+    float: right;
+}
