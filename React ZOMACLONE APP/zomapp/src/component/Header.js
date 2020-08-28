@@ -12,13 +12,13 @@ const Header = () => {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <li><Link className="navbar-brand" to="/">Zomaclone</Link></li>
+                        <li><Link className="navbar-brand brand" to="/">Zomaclone</Link></li>
                     </div>
                     <div className="collapse navbar-collapse right" id="myNavbar">
                         <ul className="nav navbar-nav justify-content-end">
-                            <li><Link to="/details/:id">List</Link></li>
-                            <li><Link>Sign In</Link></li>
-                            <li><Link>Create Account</Link></li>
+                            <li><Link to="/details/:id" clasName="rightlink">List</Link></li>
+                            <li><Link clasName="rightlink">Sign In</Link></li>
+                            <li><Link clasName="rightlink">Create Account</Link></li>
 
                         </ul>
                     </div>

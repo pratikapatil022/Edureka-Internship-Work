@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Search.css"
 
 const locurl = "http://localhost:4000/location";
 const resturl = "http://localhost:4000/restauranthome?city=";
@@ -52,17 +53,17 @@ class Search extends Component {
     render() {
         return (
             <header className="bgimg">
-                <center>
+                <center><h1 className="zname">Z!</h1>
                     <select onChange={this.handleCity} style={{ width: "150px" }}>
                         {this.renderCity(this.state.location)}
                     </select>
                     <input list="restaurant" name="rests" id="rests" style={{ height: "38px" }, { width: "250px" }} />
-                    <button type="button" class="btn btn-light">Search</button>
+                    <button type="button" className="btn btn-light">Search</button>
                     <datalist id="restaurant">
                         {this.renderRest(this.state.restaurants)}
                     </datalist>
                 </center>
-                <hr />
+
             </header>
         )
     }
