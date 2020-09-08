@@ -24,7 +24,7 @@ class Restaurant extends Component {
         var { rest } = this.state
         return (
             <div className="container">
-                <div className="panel panel-primary">
+                <div className="panel panel-default">
                     <div className="panel-heading">
                         <h2>{rest.name}</h2>
                     </div>
@@ -34,7 +34,7 @@ class Restaurant extends Component {
                                 <img className="img-responsive" src={rest.thumb} />
                             </div>
                             <div className="col-md-6">
-                                <h3>{rest.name}</h3>
+
                                 <h4>{rest.locality}</h4>
                                 <h4>{rest.address}</h4>
                                 <h4>Rs.{rest.cost} Per Two</h4>
@@ -71,11 +71,12 @@ class Restaurant extends Component {
                             </Tabs>
                         </div>
                         <br /><br />
+                        <br></br>
                         <div className="row">
-                            <button class="btn btn-danger btn-sm"
+                            <button class="btn btn-default btn-sm"
                                 onClick={this.backbutton}>Back</button>
                             &nbsp;
-                            <Link to={`/order/${this.props.match.params.id}`} class="btn btn-success btn-lg">Place Order</Link>
+                            <Link to={`/order/${this.props.match.params.id}`} class="btn btn-default btn-lg">Place Order</Link>
                         </div>
 
                     </div>

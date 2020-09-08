@@ -103,7 +103,7 @@ app.get('/mealtype', (req, res) => {
 
 MongoClient.connect(mongoUrl, (err, client) => {
     if (err) console.log("Error My Man Init!!!")
-    db = client.db('Restaurants');
+    db = client.db('restaurants');
     app.listen(4000, (err) => {
         if (err) throw err;
         console.log(`Server is running`)
